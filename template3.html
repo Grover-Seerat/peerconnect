@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{fullName}} - Resume</title>
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background: linear-gradient(to right, #fdfbfb, #ebedee); padding: 40px; }
+    .resume-box { max-width: 800px; background: #fff; margin: auto; padding: 40px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    h1 { color: #2c3e50; font-size: 36px; margin-bottom: 0; }
+    h2 { color: #34495e; font-size: 22px; border-bottom: 2px solid #3498db; margin-top: 30px; padding-bottom: 5px; }
+    p, li { font-size: 15px; color: #555; line-height: 1.6; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <div class="resume-box">
+    <h1>{{fullName}}</h1>
+    <p><strong>Email:</strong> {{email}}<br>
+       <strong>Phone:</strong> {{phone}}<br>
+       <strong>LinkedIn:</strong> {{linkedin}}</p>
+
+    <h2>About Me</h2>
+    <p>{{summary}}</p>
+
+    <h2>Skills</h2>
+    <ul>
+      {{#each skills}}<li>{{this}}</li>{{/each}}
+    </ul>
+
+    <h2>Work Experience</h2>
+    <p>{{experience}}</p>
+
+    <h2>Education</h2>
+    <p>{{education}}</p>
+  </div>
+</body>
+</html>

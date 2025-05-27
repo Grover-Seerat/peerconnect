@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>{{fullName}} - Resume</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    h1 { color: #1a237e; }
+    h2 { border-bottom: 1px solid #ccc; margin-top: 20px; }
+    p, li { font-size: 14px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h1>{{fullName}}</h1>
+  <p><strong>Email:</strong> {{email}}</p>
+  <p><strong>Phone:</strong> {{phone}}</p>
+  <p><strong>LinkedIn:</strong> {{linkedin}}</p>
+
+  <h2>Professional Summary</h2>
+  <p>{{summary}}</p>
+
+  <h2>Skills</h2>
+  <ul>
+    {{#each skills}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+
+  <h2>Experience</h2>
+  <p>{{experience}}</p>
+
+  <h2>Education</h2>
+  <p>{{education}}</p>
+</body>
+</html>
